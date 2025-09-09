@@ -1072,7 +1072,43 @@
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-20px); }
         }
-    </style>
+    /* Hover-эффекты для отзывов Авито */
+.avito-placeholder img {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.avito-placeholder img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+    z-index: 10;
+    position: relative;
+}
+
+/* Для мобильных устройств */
+@media (max-width: 768px) {
+    .avito-placeholder img:hover {
+        transform: scale(1.05);
+    }
+    
+    .avito-gallery {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+/* Для планшетов */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .avito-placeholder img:hover {
+        transform: scale(1.08);
+    }
+}
+
+/* Touch-устройства */
+.avito-placeholder img:active {
+    transform: scale(1.05);
+    transition: all 0.1s ease;
+}</style>
 </head>
 <body>
     <!-- Хедер -->
