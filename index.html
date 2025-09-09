@@ -814,11 +814,36 @@
         }
         
         .pricing-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            max-width: 1100px;
-            margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.pricing-card:nth-child(4) {
+    grid-column: 1 / 2;
+    grid-row: 2;
+}
+
+.pricing-card:nth-child(5) {
+    grid-column: 3 / 4;
+    grid-row: 2;
+}
+
+@media (max-width: 768px) {
+    .pricing-cards {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    
+    .pricing-card:nth-child(4),
+    .pricing-card:nth-child(5) {
+        grid-column: 1;
+        grid-row: auto;
+    }
+}
         }
         
         .pricing-card {
@@ -1014,43 +1039,53 @@
             transform: translateY(-2px);
         }
         
-        /* Адаптивность */
-        @media (max-width: 768px) {
-            .hero-content,
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .hero-text h1 {
-                font-size: 2em;
-            }
-            
-            .contacts {
-                flex-direction: column;
-                gap: 15px;
-            }
-            
-            .problem-cards {
-                grid-template-columns: 1fr;
-            }
-            
-            .pricing-card.featured {
-                transform: scale(1);
-            }
-            
-            .charity-images {
-                grid-template-columns: 1fr;
-            }
-            
-            .guarantee-items {
-                grid-template-columns: 1fr;
-            }
-            
-            .testimonial-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        
+      /* Адаптивность */
+@media (max-width: 768px) {
+    .hero-content,
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-text h1 {
+        font-size: 2em;
+    }
+    
+    .contacts {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .problem-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .pricing-cards {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    
+    .pricing-card:nth-child(4),
+    .pricing-card:nth-child(5) {
+        grid-column: 1;
+        grid-row: auto;
+    }
+    
+    .pricing-card.featured {
+        transform: scale(1);
+    }
+    
+    .charity-images {
+        grid-template-columns: 1fr;
+    }
+    
+    .guarantee-items {
+        grid-template-columns: 1fr;
+    }
+    
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+}
         /* Анимации при скролле */
         .fade-in {
             opacity: 0;
@@ -1445,7 +1480,7 @@
                     <div class="price">1 500₽</div>
                     <div class="price-per-lesson">за урок 60 минут</div>
                     <ul>
-                        <li>Пробный урок</li>
+                        <li>Знакомство с методикой</li>
                         <li>Диагностика уровня</li>
                         <li>План обучения</li>
                         <li>Доступ к материалам урока</li>
@@ -1478,8 +1513,8 @@
                         <li>2 урока в неделю (2 месяца)</li>
                         <li>Все материалы включены</li>
                         <li>Домашние задания</li>
-                        <li>Приоритетная поддержка</li>
-                        <li>Бонусные материалы</li>
+                        <li>Поддержка в Telegram</li>
+                        <li>Отслеживание прогресса</li>
                     </ul>
                     <a href="https://t.me/VITOPOSTANOGOV" class="btn btn-primary">Выбрать</a>
                 </div>
@@ -1494,9 +1529,25 @@
                         <li>2 урока в неделю (3 месяца)</li>
                         <li>Все материалы включены</li>
                         <li>Домашние задания</li>
-                        <li>VIP поддержка 24/7</li>
-                        <li>Все бонусные материалы</li>
-                        <li>Дополнительные разговорные практики</li>
+                        <li>Поддержка в Telegram</li>
+                        <li>Запись уроков для повторения</li>
+                        <li>Отслеживание прогресса</li>
+                    </ul>
+                    <a href="https://t.me/VITOPOSTANOGOV" class="btn btn-primary">Выбрать</a>
+                </div><div class="pricing-card">
+                    <h3>Полгода</h3>
+                    <div class="lessons-count">48 уроков</div>
+                    <div class="price">57 600₽</div>
+                    <div class="price-per-lesson">1 200₽ за урок</div>
+                    <div class="savings">Экономия 14 400₽</div>
+                    <ul>
+                        <li>2 урока в неделю (6 месяцев)</li>
+                        <li>Максимальная экономия</li>
+                        <li>Домашние задания</li>
+                        <li>Поддержка в Telegram</li>
+                        <li>Запись уроков для повторения</li>
+                        <li>Отслеживание прогресса</li>
+                        <li>Гарантия результата</li>
                     </ul>
                     <a href="https://t.me/VITOPOSTANOGOV" class="btn btn-primary">Выбрать</a>
                 </div>
