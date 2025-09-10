@@ -844,16 +844,25 @@
 }
 @media (max-width: 768px) {
     .pricing-cards {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
+        grid-template-columns: 1fr !important;
+        grid-template-rows: auto !important;
+        max-width: 320px;
+        margin: 0 auto;
     }
     
+    .pricing-card:nth-child(1),
+    .pricing-card:nth-child(2), 
+    .pricing-card:nth-child(3),
     .pricing-card:nth-child(4),
     .pricing-card:nth-child(5) {
-        grid-column: 1;
-        grid-row: auto;
+        grid-column: 1 !important;
+        grid-row: auto !important;
     }
-}  
+    
+    .pricing-card.featured {
+        transform: scale(1) !important;
+    }
+}
         .pricing-card {
             background: white;
             padding: 45px 35px;
@@ -1048,6 +1057,7 @@
         }
         
       /* Адаптивность */
+/* Адаптивность */
 @media (max-width: 768px) {
     .hero-content,
     .about-content {
@@ -1068,18 +1078,23 @@
     }
     
     .pricing-cards {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
+        grid-template-columns: 1fr !important;
+        grid-template-rows: auto !important;
+        max-width: 320px;
+        margin: 0 auto;
     }
     
+    .pricing-card:nth-child(1),
+    .pricing-card:nth-child(2), 
+    .pricing-card:nth-child(3),
     .pricing-card:nth-child(4),
     .pricing-card:nth-child(5) {
-        grid-column: 1;
-        grid-row: auto;
+        grid-column: 1 !important;
+        grid-row: auto !important;
     }
     
     .pricing-card.featured {
-        transform: scale(1);
+        transform: scale(1) !important;
     }
     
     .charity-images {
