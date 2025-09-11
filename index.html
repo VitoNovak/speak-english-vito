@@ -1055,8 +1055,6 @@
             color: var(--accent);
             transform: translateY(-2px);
         }
-        
-      /* Адаптивность */
 /* Адаптивность */
 @media (max-width: 768px) {
     .hero-content,
@@ -1093,29 +1091,38 @@
         grid-row: auto !important;
     }
     
- .pricing-card.featured {
-    transform: scale(1) !important;
-}
-
-.charity-images {
-    grid-template-columns: 1fr;
-}
-
-.guarantee-items {
-    grid-template-columns: 1fr;
-}
-
-.testimonial-grid {
-    grid-template-columns: 1fr;
-}
-
-.credentials {
-    transform: none !important;
-    animation: none !important;
-}
-
-.float {
-    animation: none !important;
+    .pricing-card.featured {
+        transform: scale(1) !important;
+    }
+    
+    .charity-images {
+        grid-template-columns: 1fr;
+    }
+    
+    .guarantee-items {
+        grid-template-columns: 1fr;
+    }
+    
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-content {
+        animation: none !important;
+        transform: none !important;
+    }
+    
+    .about * {
+        animation: none !important;
+        transform: none !important;
+        transition: none !important;
+    }
+    
+    .credentials {
+        animation: none !important;
+        transform: none !important;
+        transition: none !important;
+    }
 }
         /* Анимации при скролле */
         .fade-in {
